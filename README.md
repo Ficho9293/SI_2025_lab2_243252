@@ -13,14 +13,14 @@ Nichevski
 Цикломатска комплексност
 
 
-For the `checkCart` method, we count all decision points:
+For the checkCart method, we count all decision points:
 
-if (allItems == null)`
-if (item.getName() == null || item.getName().length() == 0)` → 1 `if` + 1 `||`
-if (item.getPrice() > 300 || item.getDiscount() > 0 || item.getQuantity() > 10)` → 1 `if` + 2 `||`
-if (item.getDiscount() > 0)`
-if (cardNumber != null && cardNumber.length() == 16)` → 1 `if` + 1 `&&`
-if (allowed.indexOf(c) == -1)`
+if (allItems == null)
+if (item.getName() == null || item.getName().length() == 0) → 1 if + 1 ||
+if (item.getPrice() > 300 || item.getDiscount() > 0 || item.getQuantity() > 10) → 1 if + 2 ||
+if (item.getDiscount() > 0)
+if (cardNumber != null && cardNumber.length() == 16) → 1 if + 1 &&
+if (allowed.indexOf(c) == -1)
 
 This gives a total of 10 logical decisions
 Cyclomatic Complexity = 10
